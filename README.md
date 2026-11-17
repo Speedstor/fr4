@@ -17,6 +17,16 @@ mkdocs serve          # then open http://127.0.0.1:8000
 
 Or read the pages as plain markdown in [`docs/`](docs/index.md).
 
+### Hosted on GitHub Pages
+
+The workflow in [`.github/workflows/docs.yml`](.github/workflows/docs.yml)
+tests the model, builds the site and publishes it on every push to `main`.
+It needs one setting, made once by hand:
+
+> Settings → Pages → Build and deployment → Source: **GitHub Actions**
+
+The site then appears at <https://speedstor.github.io/fr4/>.
+
 | Group | Start at |
 |---|---|
 | The trail: cloth, resin, coating, copper, press, measurement | [`docs/trail/decisions.md`](docs/trail/decisions.md) |

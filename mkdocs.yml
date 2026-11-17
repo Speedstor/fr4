@@ -2,6 +2,9 @@ site_name: FR4 from woven glass cloth
 site_description: >-
   A trail for making a glass and epoxy circuit board by hand, and a small
   model that predicts what a test panel should measure.
+site_url: https://speedstor.github.io/fr4/
+repo_url: https://github.com/Speedstor/fr4
+repo_name: Speedstor/fr4
 
 theme:
   name: material
