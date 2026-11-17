@@ -1,0 +1,65 @@
+FR4 coupon model. Predictions only: nothing here has been measured.
+
+1. Panel dielectric constant against resin content (2116 cloth)
+---------------------------------------------------------------
+resin wt%   glass vol%   ply mm   Dk upper   Dk log   Dk lower
+       40         41.4    0.099       4.58     4.34       4.13
+       45         36.5    0.112       4.43     4.20       4.01
+       50         32.0    0.127       4.29     4.08       3.91
+       55         27.8    0.147       4.16     3.97       3.81
+       60         23.9    0.171       4.04     3.87       3.73
+       65         20.2    0.202       3.93     3.77       3.66
+Check: a maker gives Dk 4.49 at 56% resin. The model gives 3.95, so it reads low.
+Check: a maker gives 0.119 mm per ply at 52% resin. The model gives 0.135 mm, so it reads thick.
+
+2. Coupon A: nine ring resonators on a thick two-layer panel
+------------------------------------------------------------
+Design: 5 plies of 2116, 0.637 mm thick, Dk 4.08.
+A 50 ohm trace is 1.25 mm wide. eps_eff 3.074.
+
+If the resin content drifts across the panel:
+resin wt%   thickness mm     Dk   impedance ohm   ring mode 1 GHz
+       45          0.558   4.20            45.5             1.678
+       50          0.637   4.08            50.0             1.710
+       55          0.734   3.97            55.0             1.741
+
+How far a 1% rise in Dk moves each ring resonance:
+  mode 1: 1.710 GHz, moves -7.5 MHz
+  mode 2: 3.420 GHz, moves -15.0 MHz
+  mode 3: 5.129 GHz, moves -22.5 MHz
+With the maker's Dk of 4.49, mode 1 would be 1.638 GHz.
+
+3. Weave skew between two parallel traces, ps per inch
+------------------------------------------------------
+Coupon A board, wide trace: 0.637 mm thick, trace 1.2 mm, spacing 3.0 mm
+    0 deg to the warp: median 0.16, 95th 0.42, worst 0.65
+    5 deg to the warp: median 0.00, 95th 0.00, worst 0.01
+   10 deg to the warp: median 0.00, 95th 0.01, worst 0.01
+   45 deg to the warp: median 0.00, 95th 0.00, worst 0.00
+Coupon B board, 1 ply of 2116: 0.147 mm thick, trace 0.22 mm, spacing 0.5 mm
+    0 deg to the warp: median 2.20, 95th 2.80, worst 2.81
+    5 deg to the warp: median 0.05, 95th 0.07, worst 0.08
+   10 deg to the warp: median 0.03, 95th 0.05, worst 0.06
+   45 deg to the warp: median 0.01, 95th 0.02, worst 0.02
+1 ply of 1080: 0.084 mm thick, trace 0.13 mm, spacing 0.5 mm
+    0 deg to the warp: median 3.66, 95th 5.60, worst 5.69
+    5 deg to the warp: median 0.09, 95th 0.15, worst 0.17
+   10 deg to the warp: median 0.05, 95th 0.08, worst 0.09
+   45 deg to the warp: median 0.02, 95th 0.05, worst 0.06
+2 plies of 1080: 0.168 mm thick, trace 0.28 mm, spacing 0.5 mm
+    0 deg to the warp: median 0.89, 95th 2.38, worst 2.72
+    5 deg to the warp: median 0.02, 95th 0.06, worst 0.07
+   10 deg to the warp: median 0.01, 95th 0.03, worst 0.04
+   45 deg to the warp: median 0.01, 95th 0.03, worst 0.04
+1 ply of 7628: 0.219 mm thick, trace 0.38 mm, spacing 0.5 mm
+    0 deg to the warp: median 1.24, 95th 2.02, worst 2.14
+    5 deg to the warp: median 0.06, 95th 0.08, worst 0.09
+   10 deg to the warp: median 0.01, 95th 0.02, worst 0.02
+   45 deg to the warp: median 0.02, 95th 0.06, worst 0.07
+
+4. Press force
+--------------
+  4 x 4 inch at 100 psi: 0.8 short tons, 7 kN
+  4 x 4 inch at 300 psi: 2.4 short tons, 21 kN
+  6 x 6 inch at 100 psi: 1.8 short tons, 16 kN
+  6 x 6 inch at 300 psi: 5.4 short tons, 48 kN

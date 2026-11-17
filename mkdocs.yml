@@ -1,0 +1,56 @@
+site_name: FR4 from woven glass cloth
+site_description: >-
+  A trail for making a glass and epoxy circuit board by hand, and a small
+  model that predicts what a test panel should measure.
+
+theme:
+  name: material
+  features:
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
+  - toc:
+      permalink: true
+
+# Each group below is a collapsible section in the sidebar.
+nav:
+  - Start here: index.md
+  - The trail:
+      - What is decided: trail/decisions.md
+      - 1. The cloth: trail/cloth.md
+      - 2. The resin: trail/resin.md
+      - 3. Coat and part-cure: trail/coat.md
+      - 4. The copper foil: trail/copper.md
+      - 5. Press: trail/press.md
+      - 6. Measure: trail/measure.md
+      - What comes next: trail/next.md
+  - The model:
+      - How it works: model/overview.md
+      - Resin content: model/laminate.md
+      - A trace on the board: model/microstrip.md
+      - The weave: model/weave.md
+      - What it predicts: model/predictions.md
+      - Where it is wrong: model/limits.md
+  - Reference:
+      - Words used here: reference/glossary.md
+      - Reading list: reference/reading.md

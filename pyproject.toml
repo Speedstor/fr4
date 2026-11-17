@@ -1,0 +1,16 @@
+[project]
+name = "fr4sim"
+version = "0.1.0"
+description = "A small model of a home-made glass and epoxy circuit board"
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+docs = ["mkdocs-material"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
